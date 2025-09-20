@@ -75,3 +75,5 @@ The project uses several Python libraries for data analysis and prototyping:
 - wget — for downloading files (if needed)
 - jupyterlab — for interactive notebooks and prototyping
 
+# Script Output
+<img width="1228" height="276" alt="Снимок экрана 2025-09-20 в 10 19 54" src="https://github.com/user-attachments/assets/39b6dbb3-dc34-4dbf-af89-ea1c0c95b388" />
