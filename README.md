@@ -3,7 +3,8 @@
 > [!NOTE]
 ><strong>About this file</strong>
 ><p>This file provides a historical view of global CO₂ and greenhouse gas (GHG) emissions across countries, regions, economic groups, and sectors. It includes detailed information on population, GDP, energy use, and emissions from cement, coal, oil, gas, flaring, and land-use change.</p> <p>The data is sourced from Our World in Data, a trusted platform for global statistics. Each row represents a country (or group/sector) in a given year, with values for per capita emissions, emissions per GDP, cumulative emissions, and contributions to global climate change.</p><p>In addition to CO₂, the dataset contains methane, nitrous oxide, and total GHG emissions, along with energy consumption and trade-related CO₂ indicators. It also reports global shares and estimates of temperature change caused by different greenhouse gases. It consists of 50 columns in total.</p>
-<ol>**Links:**
+<ol>
+Links:
 <p><li>link to the dataset:
 https://drive.google.com/file/d/14wKDsdZ1HnI1-zcAPB59HnHJq6Th2z3X/view?usp=sharing</li>
 <p><li>original source of the dataset:
@@ -84,7 +85,7 @@ The project uses several Python libraries for data analysis and prototyping:
 <ol>
 
 <li>First, you need to see how the raw dataset looks before any changes.
-<p> Look at the first rows (head (10)) — to understand the structure.</p>
+<p>  Look at the first rows (head (10))— to understand the structure.</p>
 <li> Run info() to see column types (int, float, object, etc.) and how many values are non-null vs. missing.
 <li>Count missing values (isnull().sum()) to identify potential problems.
 <li>For text columns (object):
