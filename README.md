@@ -28,7 +28,7 @@ The main script is `data_loader.py`, which downloads the dataset and prints a qu
 > - Installed packages: pandas, numpy, pyarrow, black
 
 
-#### Virtual Environment Setup
+## Virtual Environment Setup
 
 <ol>
 
@@ -46,10 +46,10 @@ The main script is `data_loader.py`, which downloads the dataset and prints a qu
 </ol>
 <p>poetry install -no-root</p>
 
-**Run the Script**
+#### Run the Script
 <p>python3 data_loader.py</p>
 
-**Project Structure**
+#### Project Structure
 
 <pre>
  data-engineering/ 
@@ -77,10 +77,10 @@ The project uses several Python libraries for data analysis and prototyping:
 - wget — for downloading files (if needed)
 - jupyterlab — for interactive notebooks and prototyping
 
-# Script Output
+#### Script Output
 <img width="1228" height="276" alt="Снимок экрана 2025-09-20 в 10 19 54" src="https://github.com/user-attachments/assets/39b6dbb3-dc34-4dbf-af89-ea1c0c95b388" />
 
-#### Analyze data types
+### Analyze data types
 <ol>
 
 <li>First, you need to see how the raw dataset looks before any changes.
@@ -92,12 +92,12 @@ The project uses several Python libraries for data analysis and prototyping:
 <p> - For numeric columns, use describe() — check min, max, mean, etc. to spot outliers or strange numbers.</p>
 </ol>
 
-## Example:
+#### Example:
 <img width="548" height="700" alt="Снимок экрана 2025-09-30 в 17 31 55" src="https://github.com/user-attachments/assets/4685aba7-a0bb-44a6-9390-b658c3583491" />
 <img width="593" height="689" alt="Снимок экрана 2025-09-30 в 17 32 27" src="https://github.com/user-attachments/assets/e515636e-17d7-4bd4-a831-1bca4a4ad61d" />
 <img width="877" height="406" alt="Снимок экрана 2025-09-30 в 17 33 04" src="https://github.com/user-attachments/assets/546d4e54-2eb9-42c6-9fed-bbd1d632c5c0" />
 
-####  Cast data types
+###  Cast data types
 <ol>
 <li>Once you understand the current state, you fix column types to make analysis easier:
 <p>year to datetime64[ns].
@@ -110,7 +110,7 @@ The project uses several Python libraries for data analysis and prototyping:
 <li>Compare memory usage before and after — you’ll usually see significant savings, especially for text columns.
 </ol>
 
-#### Save results
+### Save results
 <p>To keep your work:
 <p>Save the cleaned dataset as Parquet (Data_clean.parquet), it’s compact, fast, and preserves data types.
 <p>Optionally also save to CSV if you want to open it in Excel or Google Sheets.
