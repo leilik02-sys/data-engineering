@@ -35,10 +35,18 @@ python api_reader.py
   
 <img width="1145" height="230" alt="Снимок экрана 2025-10-07 в 15 28 55" src="https://github.com/user-attachments/assets/55479e53-da12-438c-b6cb-2a5177242a80" />
 
+  ### Project Structure
+my_project/
+├── api_example/
+│   ├── api_reader.py
+│   ├── README.md 
+│   ├── screenshot.png
+│   ├── action_16.json 
+│   ├── action_27.json 
+│   └──  action_127.json
+├── parse_example/
+│   ├── data_parser.py
+│   ├── README.md
+│   └── rbc_articles_07_10_2025.json
+└── README.md
   
-   MY_PROJECT/
-├── README.md
-└── api_example/
-    ├── api_reader.py
-    ├── screenshot.png
-    └── README.md
