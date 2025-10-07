@@ -40,11 +40,16 @@ If the script executes successfully, you’ll see output like this:
 #### Example of Saved JSON File
 <img width="1123" height="465" alt="Снимок экрана 2025-10-07 в 19 59 37" src="https://github.com/user-attachments/assets/56c34ded-6e89-450c-bc5e-e225f275671e" />
 
-### Project Structure
+
+  ### Project Structure
 my_project/
 ├── api_example/
-│   └── api_reader.py
-│   ├── README.md
+│   ├── api_reader.py
+│   ├── README.md 
+│   ├── screenshot.png
+│   ├── action_16.json 
+│   ├── action_27.json 
+│   └──  action_127.json
 ├── parse_example/
 │   ├── data_parser.py
 │   ├── README.md
