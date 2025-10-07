@@ -53,5 +53,6 @@ my_project/
 ├── parse_example/
 │   ├── data_parser.py
 │   ├── README.md
+│   ├── screenshot.png
 │   └── rbc_articles_07_10_2025.json
 └── README.md
