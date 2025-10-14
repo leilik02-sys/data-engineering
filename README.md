@@ -51,24 +51,14 @@ The main script is `data_loader.py`, which downloads the dataset and prints a qu
 <p>python3 data_loader.py</p>
 
 #### Project Structure
-
-<pre>
+```
  data-engineering/ 
-
-├── data_loader.py     
- # Script for downloading and previewing dataset
-
-├── pyproject.toml       
-# Poetry configuration file (dependencies and metadata)
-
-├── poetry.lock         
- # Locked dependency versions
-
-├── requirements.txt     
-# Alternative dependencies file (for pip users)
-
-└── README.md           
- # Project documentation </pre>
+├── data_loader.py      # Script for downloading and previewing dataset
+├── pyproject.toml      # Poetry configuration file (dependencies and metadata)
+├── poetry.lock         # Locked dependency versions
+├── requirements.txt    # Alternative dependencies file (for pip users)
+└── README.md           # Project documentation </pre>
+```
 
 <strong>Dependencies</strong>
 
