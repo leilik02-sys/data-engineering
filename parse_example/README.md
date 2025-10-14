@@ -9,7 +9,7 @@ The script `data_parser.py`:
 - sends an HTTP request to the RBC website;
 - parses the HTML page using **BeautifulSoup**;
 - extracts article titles and URLs;
-- saves the collected data as a `.json` file with the current date in its name (e.g. `rbc_articles_07_10_2025.json`).
+- saves the collected data as a `.json` file with the current date in its name (e.g. `rbc_articles_14_10_2025.json`).
 
 Each run of the script creates a new JSON file in the same directory (`parse_example`).
 
