@@ -57,6 +57,8 @@ The main script is `data_loader.py`, which downloads the dataset and prints a qu
 ├── pyproject.toml      # Poetry configuration file (dependencies and metadata)
 ├── poetry.lock         # Locked dependency versions
 ├── requirements.txt    # Alternative dependencies file (for pip users)
+├──write_to_db.py
+├──.gitignore
 └── README.md           # Project documentation </pre>
 ```
 
