@@ -1,0 +1,113 @@
+# Кэш и скомпилированные файлы Python 
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Расширения для C и бинарные файлы 
+*.so
+
+# Папки сборки и дистрибуции (если проект будет упаковываться) 
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Логи установщика pip и временные папки 
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Логи тестов, кэш pytest и отчёты покрытия кода 
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Переводы (если используется gettext) 
+*.mo
+*.pot
+
+# Файлы Django / Flask / Scrapy 
+*.log
+local_settings.py
+instance/
+.webassets-cache
+.scrapy
+
+# Локальные базы данных SQLite 
+db.sqlite3
+db.sqlite3-journal
+creds.db        # База с учётными данными
+
+# Документация Sphinx и статические сайты 
+docs/_build/
+site/
+
+# Системные файлы macOS и IDE 
+.DS_Store
+.vscode/
+.idea/
+.spyderproject
+.spyproject
+.ropeproject
+
+# Виртуальные окружения Python 
+.env            # Файл с переменными окружения (пароли, логины и т.п.)
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Кэш анализаторов кода и статической типизации 
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Конфигурационные файлы Poetry / Pipenv / PDM 
+poetry.lock
+Pipfile.lock
+pdm.lock
+.pdm.toml
+.pypirc
+
+# Временные и резервные файлы 
+*.bak
+*.tmp
+*.swp
+*.swo
+
+# Данные и результаты обработки
+*.parquet       # Датасеты (Data_clean.parquet)
+*.csv
+*.tsv
+Data_clean.parquet
+
+# Прочее 
+__pycache__/
+*.pyc
