@@ -51,8 +51,8 @@
 
 ## EDA ноутбук (рендер NBViewer)
 
-Открыть ноутбук в рендере NBViewer:  
-[Посмотреть EDA.ipynb в NBViewer](https://nbviewer.org/github/leilik02-sys/data-engineering/blob/main/notebooks/EDA.ipynb)
+[Открыть в nbviewer (актуальная версия)](https://nbviewer.org/github/leilik02-sys/data-engineering/blob/main/notebooks/EDA.ipynb?flush_cache=true)
+
 
 ## Автор
 
