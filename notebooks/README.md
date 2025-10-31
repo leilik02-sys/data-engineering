@@ -49,9 +49,10 @@
 - Развитые страны демонстрируют **снижение выбросов при росте ВВП**,  
   переходные и развивающиеся сохраняют высокую зависимость от энергопотребления.
 
-## Просмотр ноутбука через nbviewer
-[Открыть EDA в nbviewer](https://nbviewer.org/github/leilik02-sys/data-engineering/blob/main/notebooks/EDA.ipynb)
+## EDA ноутбук (рендер NBViewer)
 
+Открыть ноутбук в рендере NBViewer:  
+[Посмотреть EDA.ipynb в NBViewer](https://nbviewer.org/github/<leilik02-sys>/<data-engineering>/blob/main/notebooks/EDA.ipynb)
 
 ## Автор
 
