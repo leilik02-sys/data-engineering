@@ -71,24 +71,24 @@ MY-PROJECT/
 
 Follow these steps to set up the environment and run the project:
 
-### 1. Create and activate a Conda environment
+**1. Create and activate a Conda environment**
 ```bash
 conda create -n my_env python=3.13 -y
 conda activate my_env
 ```
-### 2. Install dependencies 
+**2. Install dependencies**
 ```bash
 pip install pandas pyarrow sqlalchemy psycopg2-binary python-dotenv
 ```
-### 3. Configure database credentials
+**3. Configure database credentials**
 
 Create a `.env` file in the root of the project
 
-### 4. ETL Pipeline Usage
+**4. ETL Pipeline Usage**
 
 The ETL process can be executed directly via command line.
  
- **Run the Full Pipeline**
+**5. Run the Full Pipeline**
 You can execute the complete ETL process using the command below:
 
 ```bash
@@ -103,15 +103,18 @@ python etl/main.py --file_id <GoogleDrive_file_ID> --table <table_name>
 
 You can also execute each stage of the ETL process separately:
 
-# Extract stage – download raw data from Google Drive
+#### Extract stage – download raw data from Google Drive
+```bash
 python -m etl.main extract --file_id 14wKDsdZ1HnI1-zcAPB59HnHJq6Th2z3X
-
-# Transform stage – clean and typecast raw data
+```
+#### Transform stage – clean and typecast raw data
+```bash
 python -m etl.main transform --input data/raw/raw_data.csv
-
-# Load stage – upload cleaned data into PostgreSQL
+```
+#### Load stage – upload cleaned data into PostgreSQL
+```bash
 python -m etl.main load --input data/processed/clean_data.parquet --table khabibullina
-
+```
 ### 5. **ETL Functionality**
 
 #### **Extract**
@@ -135,10 +138,11 @@ python -m etl.main load --input data/processed/clean_data.parquet --table khabib
 ```bash
 (my_env) MacBook-Air-Lejla:my_project lejla$ python -m etl.main --file_id 14wKDsdZ1HnI1-zcAPB59HnHJq6Th2z3X --table khabibullina
 ```
+```
 [RUN] Start ETL
 [EXTRACT] Сырые данные сохранены в data/raw/raw_data.csv
 [TRANSFORM] Данные обработаны и сохранены в data/processed/clean_data.parquet
 [LOAD] Загружено 100 строк в таблицу khabibullina
 [DONE] ETL завершен
-
+```
 
