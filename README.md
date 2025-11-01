@@ -187,14 +187,77 @@ If you implement `validate.py`, it can:
 -  Compare record counts between **Parquet** and **PostgreSQL**
 ---
 
-##  .gitignore Example
+##  **.gitignore Example**
+
+```bash
+# Environment and cache files
 .env
 __pycache__/
 .ipynb_checkpoints/
+*.pyc
+*.pyo
+
+# Data and outputs
+data/
+├── raw/
+├── processed/
 *.csv
 *.parquet
-data/raw/
-data/processed/
+
+---
+## EDA
+# **Historical CO₂, Energy, and Economic Data Analysis (EDA)**
+
+This project presents an **Exploratory Data Analysis (EDA)** of historical data exploring the relationship between **CO₂ emissions**, **energy consumption**, and **economic development** of countries over the period **1850–2023**.
+
+---
+
+## **Project Contents**
+
+- **notebooks/EDA.ipynb** — main notebook containing full analysis, visualizations, and insights.  
+- **data/** — source datasets (linked via Google Drive in the notebook).  
+- **results/** — *(optional)* aggregated plots and summary metrics.  
+
+---
+
+## **Objective**
+
+To explore how **CO₂ emissions correlate with GDP growth and energy usage**,  
+and to identify the point where developed economies show **a slowdown in emission growth despite increasing GDP**.
+
+---
+
+## **Country Groups**
+
+- **Developed:** United States, Germany, Japan  
+- **Emerging:** China, India, Russia  
+- **Developing:** Nigeria, Indonesia, Pakistan  
+
+---
+
+## **Tools and Technologies**
+
+- **Python Libraries:** Pandas, NumPy, SciPy, Pandera  
+- **Visualization:** Plotly, Seaborn, Matplotlib  
+- **Environment:** Jupyter Notebook (interactive analysis platform)
+
+---
+
+## **Key Findings**
+
+- Dataset covers the period **1850–2023**, containing over **1,500 records**.  
+- Average data completeness is around **85%**.  
+- Strong correlation detected between **GDP**, **energy use**, and **CO₂ emissions**.  
+- Developed countries show **decoupling of GDP growth and CO₂ emissions**,  
+  while emerging and developing countries remain highly energy-dependent.
+
+---
+
+## **View the Notebook in nbviewer**
+
+ [Open EDA in nbviewer](https://nbviewer.org/github/leilik02-sys/data-engineering/blob/0bf28b2/notebooks/EDA.ipynb)  
+
+
 
 
 
