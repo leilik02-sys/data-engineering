@@ -1,4 +1,4 @@
-#  Dataset: Historical CO₂ data with energy, economy, and population indicators (1850-2025)
+#  Dataset: Historical CO₂ data with energy, economy, and population indicators (1850-2023)
 
 > [!NOTE]
 ><strong>About this file</strong>
