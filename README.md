@@ -203,7 +203,7 @@ data/
 ├── processed/
 *.csv
 *.parquet
-
+```
 ---
 ## EDA
 # **Historical CO₂, Energy, and Economic Data Analysis (EDA)**
