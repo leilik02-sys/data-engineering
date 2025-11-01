@@ -50,7 +50,7 @@
   переходные и развивающиеся сохраняют высокую зависимость от энергопотребления.
 
 ## EDA ноутбук (рендер NBViewer)
-
+https://nbviewer.org/github/leilik02-sys/data-engineering/blob/0bf28b2/notebooks/EDA.ipynb
 
 
 ## Автор
