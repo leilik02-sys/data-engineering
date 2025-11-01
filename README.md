@@ -17,7 +17,52 @@ __________________________________________
 >This project demonstrates how to set up a Python environment with Conda and Poetry, load a dataset from Google Drive, and preview the first 10 rows using pandas.
 The main script is `data_loader.py`, which downloads the dataset and prints a quick preview for validation.
 
+---
+#### Project Structure
+```
+ data-engineering/ 
+├── data_loader.py      # Script for downloading and previewing dataset
+├── pyproject.toml      # Poetry configuration file (dependencies and metadata)
+├── poetry.lock         # Locked dependency versions
+├── requirements.txt    # Alternative dependencies file (for pip users)
+├──write_to_db.py
+├──.gitignore
+└── README.md           # Project documentation </pre>
 
+
+```
+data-engineering/ 
+├── etl/                     # ETL pipeline package
+│   ├── __init__.py
+│   ├── extract.py           # Data loading from Google Drive
+│   ├── transform.py         # Data transformation and cleaning
+│   ├── load.py              # Loading to DB and export to parquet
+│   ├── validate.py          # Data validation
+│   └── main.py              # CLI entry point
+├── examples
+│   ├── api_example/         # API examples and integration    
+│   │   ├── api_reader.py
+│   │   ├── environment.yml
+│   │   ├── pyproject.toml
+│   │   ├── README.md
+│   │   └── requirements.txt
+│   
+│   ├── parse_example/        # Data parsing examples
+│   ├── data_parser.py
+│   ├── environment.yml
+│   ├── pyproject.toml
+│   ├── README.md
+│   └── requirements.txt
+├── notebook/                 # Jupyter notebooks
+│   └── EDA.ipynb             # Exploratory Data Analysis
+
+├── .gitignore
+├── environment.yml           # Conda environment configuration
+├── pyproject.toml           # Python project configuration
+├── README.md
+└── requirements.txt         # Python dependencies
+```
+---
 > [!IMPORTANT]
 > #### Prerequisites
 >
@@ -50,16 +95,7 @@ The main script is `data_loader.py`, which downloads the dataset and prints a qu
 #### Run the Script
 <p>python3 data_loader.py</p>
 
-#### Project Structure
-```
- data-engineering/ 
-├── data_loader.py      # Script for downloading and previewing dataset
-├── pyproject.toml      # Poetry configuration file (dependencies and metadata)
-├── poetry.lock         # Locked dependency versions
-├── requirements.txt    # Alternative dependencies file (for pip users)
-├──write_to_db.py
-├──.gitignore
-└── README.md           # Project documentation </pre>
+
 ```
 
 <strong>Dependencies</strong>
@@ -112,3 +148,65 @@ The project uses several Python libraries for data analysis and prototyping:
 <img width="621" height="689" alt="Снимок экрана 2025-09-30 в 17 44 13" src="https://github.com/user-attachments/assets/7aca9a48-3f20-4927-ab71-2dbe281aabc3" />
 <img width="672" height="706" alt="Снимок экрана 2025-09-30 в 17 44 51" src="https://github.com/user-attachments/assets/7a3a1dcd-cced-46fd-aab9-a27d68657e79" />
 <img width="710" height="717" alt="Снимок экрана 2025-09-30 в 17 45 02" src="https://github.com/user-attachments/assets/f779bcee-398d-495f-9fdc-0acf11ed5f54" />
+
+__________________________________________
+
+## Running the ETL Pipeline
+
+The ETL process can be executed directly from the command line.
+
+**1.Run the full pipeline**
+```bash
+python etl/main.py --file_id <GoogleDrive_file_ID> --table <table_name>
+```
+*Example:*
+
+```bash
+python etl/main.py --file_id 14wKDsdZ1HnI1-zcAPB59HnHJq6Th2z3X --table khabibullina
+```
+**2.Command Line Arguments**
+
+| **Parameter** | **Description**                         | **Example**                                     |
+|---------------|------------------------------------------|-------------------------------------------------|
+| `--file_id`   | Google Drive file ID of the dataset      | `--file_id 14wKDsdZ1HnI1-zcAPB59HnHJq6Th2z3X`   |
+| `--table`     | Name of the PostgreSQL table to write to | `--table khabibullina`                          |
+**3.ETL Functionality**
+
+| **Stage**     | **Module**       | **Description**                                                                       |
+|----------------|------------------|----------------------------------------------------------------------------------------|
+| **Extract**   | `etl.extract`    | Downloads the CSV dataset from Google Drive → `data/raw/raw_data.csv`                 |
+| **Transform** | `etl.transform`  | Converts data types, cleans columns, validates → `data/processed/clean_data.parquet`  |
+| **Load**      | `etl.load`       | Loads ≤100 rows into PostgreSQL and adds primary key `id`                             |
+| **Main**      | `etl.main`       | Connects all stages and provides a CLI interface                                      |
+
+**4.Example Output**
+
+```bash
+(my_env) MacBook-Air-Lejla:my_project lejla$ python etl/main.py --file_id 14wKDsdZ1HnI1-zcAPB59HnHJq6Th2z3X --table khabibullina
+
+[RUN] Start ETL
+[EXTRACT] Сырые данные сохранены в data/raw/raw_data.csv
+[TRANSFORM] Данные обработаны и сохранены в data/processed/clean_data.parquet
+[LOAD] Загружено 100 строк в таблицу khabibullina
+[DONE] ETL завершен
+```
+**5.Validation**
+
+If you implement `validate.py`, it can:
+
+- Check data integrity and duplicates  
+-  Verify type consistency  
+-  Compare record counts between **Parquet** and **PostgreSQL**
+---
+
+##  .gitignore Example
+.env
+__pycache__/
+.ipynb_checkpoints/
+*.csv
+*.parquet
+data/raw/
+data/processed/
+
+
+
