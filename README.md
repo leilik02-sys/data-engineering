@@ -30,8 +30,10 @@ This project presents a complete data engineering workflow for processing, trans
 
 ## Dataset Overview
 
-**Dataset:** Historical CO₂, Energy, and Population Data (1850–2023)
-**Source:** Our World in Data + Kaggle
+<p style="text-indent: 2em;">
+<b>Dataset:</b> Historical CO₂, Energy, and Population Data (1850–2023)<br>
+<b>Source:</b> Our World in Data + Kaggle
+</p>
 
 Each record represents one country or region per year and includes:
 - CO₂ and greenhouse gas emissions (coal, oil, gas, cement, land-use)
