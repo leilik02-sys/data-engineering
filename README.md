@@ -18,7 +18,7 @@ This project presents a complete data engineering workflow for processing, trans
 1. [Dataset Overview](#dataset-overview)
 2. [Project Description](#project-description)
 3. [Project Structure](#project-structure)
-4. [Environment Setup](#environment-setup)
+4. [Installation & Setup](#installation--setup)
 5. [ETL Pipeline](#etl-pipeline)
 6. [EDA (Exploratory Data Analysis)](#eda-exploratory-data-analysis)
 7. [Experiments & Additional Files](#experiments--additional-files)
@@ -275,7 +275,7 @@ python etl/main.py --file_id 14wKDsdZ1HnI1-zcAPB59HnHJq6Th2z3X --table khabibull
 ---
 
 
-## EDA
+## EDA (Exploratory Data Analysis
 # **Historical CO₂, Energy, and Economic Data Analysis (EDA)**
 
 This project presents an **Exploratory Data Analysis (EDA)** of historical data exploring the relationship between **CO₂ emissions**, **energy consumption**, and **economic development** of countries over the period **1850–2023**.
