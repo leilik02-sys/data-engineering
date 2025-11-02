@@ -356,8 +356,8 @@ Supporting examples and scripts located in the `experiments/` directory.
 | ---- | ------------ |
 | `experiments/api_example` | API ingestion examples |
 | `experiments/parse_example` | Parsing demonstrations |
-| `experiments/legacy/write_to_db.py` | Legacy DB upload example |
-| `experiments/legacy/read_from_db.py` | PostgreSQL reading example |
+| `experiments/legacy/write_to_db.py` | Loads cleaned data into PostgreSQL |
+| `experiments/legacy/data_loader.py` | Loads and cleans dataset from Google Drive, saves as Parquet |
 
 
 ---
