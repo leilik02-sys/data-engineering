@@ -10,7 +10,9 @@
 > [!NOTE]
 This project presents a complete data engineering workflow for processing, transforming, validating, and analyzing historical CO₂ emission data from 1850 to 2023. The dataset combines information about population, GDP, and energy use across countries and regions.
 
+
 ---
+
 
 ## Table of Contents
 1. [Dataset Overview](#dataset-overview)
@@ -22,7 +24,9 @@ This project presents a complete data engineering workflow for processing, trans
 7. [Experiments & Additional Files](#experiments--additional-files)
 8. [.gitignore Example](#gitignore-example)
 
+
 ---
+
 
 ## Dataset Overview
 
@@ -38,7 +42,10 @@ Each record represents one country or region per year and includes:
 - [Google Drive Dataset](https://drive.google.com/file/d/14wKDsdZ1HnI1-zcAPB59HnHJq6Th2z3X/view?usp=sharing)
 - [Original Kaggle Source](https://www.kaggle.com/datasets/shreyanshdangi/co-emissions-across-countries-regions-and-sectors/data)
 
+
 ---
+
+
 ##  Project Overview
 
 > [!IMPORTANT]
@@ -52,7 +59,9 @@ Each record represents one country or region per year and includes:
 - Export processed data to Parquet  
 - Perform exploratory analysis of CO₂ emissions, energy use, and GDP trends  
 
+
 ---
+
 
 ## Project Structure
 
@@ -92,6 +101,7 @@ data-engineering/
 
 ---
 
+
 #  Project Description
 ## Dataset: Historical CO₂ data with energy, economy, and population indicators (1850-2023)
 
@@ -107,14 +117,18 @@ The dataset contains:
 - ~50 columns (CO₂, CH₄, N₂O, GHGs, population, GDP, energy consumption, etc.)  
 - Data from **1850 to 2023**
 
+
 ---
+
 
 ##  Installation & Setup
 
 > [!TIP]
 > Use **Conda** or **Poetry** to ensure a clean and reproducible environment for running the ETL pipeline and EDA.
 
+
 ---
+
 
 ### 1. Create and activate the virtual environment
 
@@ -136,6 +150,7 @@ pip install pandas gdown numpy pyarrow sqlalchemy psycopg2-binary jupyterlab mat
 
 ---
 
+
 ## ETL Pipeline
 
 > [!IMPORTANT]
@@ -152,7 +167,9 @@ The pipeline consists of **four main scripts** located in the `etl/` directory:
 | **Load** | `load.py` | Uploads up to 100 rows of the processed data into a PostgreSQL table (default schema: `public`). |
 | **Main** | `main.py` | Connects all pipeline stages and provides a CLI interface for easy execution from the terminal. |
 
+
 ---
+
 
 ###  Folder Overview
 
@@ -165,7 +182,9 @@ etl/
 ├── load.py # Uploads data to PostgreSQL
 └── main.py # Command-line entry point
 ```
+
 ---
+
 
 ###  1. Extract — Downloading the Dataset
 
@@ -177,17 +196,18 @@ etl/
 python -m etl.main extract --file_id <GoogleDrive_file_ID> --output dataset.csv
 ```
 
-Example:
+**Example:**
 ```bash
 python -m etl.main extract --file_id 14wKDsdZ1HnI1-zcAPB59HnHJq6Th2z3X
 ```
+
 **Output:**
 ```bash
 [EXTRACT] Raw data saved to data/raw/raw_data.csv
 ```
 
 ### 2. Transform — Data Cleaning and Type Conversion  
-[!TIP]  
+> [!TIP]  
 Converts the year column to datetime, ensures population is integer,  
 and stores the cleaned data as a .parquet file in data/processed/.
 
@@ -202,7 +222,7 @@ python -m etl.main transform --input data/raw/raw_data.csv
 ```
 
 ### 3. Validate — Data Integrity Check
-[!NOTE]
+> [!NOTE]
 Ensures that the dataset is not empty and that key columns contain valid values.
 
 **Command:** 
@@ -216,7 +236,7 @@ python -m etl.main validate --input data/processed/clean_data.parquet
 ```
 
 ### 4. Load — Upload to PostgreSQL
-[!IMPORTANT]
+> [!IMPORTANT]
 Loads up to 100 rows of cleaned data into the specified PostgreSQL table.
 
 **Command:** 
@@ -230,16 +250,18 @@ python -m etl.main load --input data/processed/clean_data.parquet --table khabib
 ```
 
 ### 5. Run — Full Pipeline
-[!TIP]
+> [!TIP]
 Combines all stages (extract → transform → validate → load) in one command.
 
 **Command:** 
 ```bash
 python etl/main.py --file_id <GoogleDrive_file_ID> --table khabibullina
 ```
+
 **Example:**
 ```bash
 python etl/main.py --file_id 14wKDsdZ1HnI1-zcAPB59HnHJq6Th2z3X --table khabibullina
+```
 
 **Output:**
 ```bash
@@ -249,6 +271,7 @@ python etl/main.py --file_id 14wKDsdZ1HnI1-zcAPB59HnHJq6Th2z3X --table khabibull
 [LOAD] 100 rows loaded into table 'khabibullina'
 [DONE] ETL complete
 ```
+
 ---
 
 
@@ -257,7 +280,9 @@ python etl/main.py --file_id 14wKDsdZ1HnI1-zcAPB59HnHJq6Th2z3X --table khabibull
 
 This project presents an **Exploratory Data Analysis (EDA)** of historical data exploring the relationship between **CO₂ emissions**, **energy consumption**, and **economic development** of countries over the period **1850–2023**.
 
+
 ---
+
 
 ## **Project Contents**
 
@@ -265,14 +290,18 @@ This project presents an **Exploratory Data Analysis (EDA)** of historical data 
 - **data/** — source datasets (linked via Google Drive in the notebook).  
 - **results/** — *(optional)* aggregated plots and summary metrics.  
 
+
 ---
+
 
 ## **Objective**
 
 To explore how **CO₂ emissions correlate with GDP growth and energy usage**,  
 and to identify the point where developed economies show **a slowdown in emission growth despite increasing GDP**.
 
+
 ---
+
 
 ## **Country Groups**
 
@@ -280,7 +309,9 @@ and to identify the point where developed economies show **a slowdown in emissio
 - **Emerging:** China, India, Russia  
 - **Developing:** Nigeria, Indonesia, Pakistan  
 
+
 ---
+
 
 ## **Tools and Technologies**
 
@@ -288,7 +319,9 @@ and to identify the point where developed economies show **a slowdown in emissio
 - **Visualization:** Plotly, Seaborn, Matplotlib  
 - **Environment:** Jupyter Notebook (interactive analysis platform)
 
+
 ---
+
 
 ## **Key Findings**
 
@@ -298,17 +331,21 @@ and to identify the point where developed economies show **a slowdown in emissio
 - Developed countries show **decoupling of GDP growth and CO₂ emissions**,  
   while emerging and developing countries remain highly energy-dependent.
 
+
 ---
+
 
 ## **View the Notebook in nbviewer**
 
  [Open EDA in nbviewer](https://nbviewer.org/github/leilik02-sys/data-engineering/blob/0bf28b2/notebooks/EDA.ipynb)  
-> [!IMPORTANT]
+
+
 
 --
 
+
 ### Experiments & Additional Files  
-[!NOTE]  
+> [!NOTE]  
 Supporting examples and scripts located in the `experiments/` directory.  
 
 | Path | Description |
@@ -318,10 +355,12 @@ Supporting examples and scripts located in the `experiments/` directory.
 | `experiments/legacy/write_to_db.py` | Legacy DB upload example |
 | `experiments/legacy/read_from_db.py` | PostgreSQL reading example |
 
+
 --
 
+
 ### .gitignore Example  
-[!TIP]  
+> [!TIP]  
 Add the following to `.gitignore` to avoid committing large or temporary files.  
 
 ```bash
@@ -336,11 +375,13 @@ __pycache__/
 data/
 *.csv
 *.parquet
+```
 
 --
 
+
 ### Summary  
-[!NOTE]  
+> [!NOTE]
 The project delivers a full ETL + EDA workflow and meets the technical and structural requirements of the Data Engineering course (Lecture 8).  
 
 - Automated data ingestion and cleaning  
