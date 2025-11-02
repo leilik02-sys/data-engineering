@@ -78,9 +78,9 @@ data-engineering/
 │   ├── api_example/         # API examples and integration    
 │   │   └── api_reader.py
 │   │   
-│   │   
-│   │   
-│   │   
+│   ├──legacy   
+│   │  ├──write_to_db.py
+│   │  └──data_loader.py
 │   │
 │   ├── parse_example/        # Data parsing examples
 │   └── data_parser.py
