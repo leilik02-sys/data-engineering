@@ -341,7 +341,7 @@ and to identify the point where developed economies show **a slowdown in emissio
 
 
 
---
+---
 
 
 ### Experiments & Additional Files  
@@ -356,7 +356,7 @@ Supporting examples and scripts located in the `experiments/` directory.
 | `experiments/legacy/read_from_db.py` | PostgreSQL reading example |
 
 
---
+---
 
 
 ### .gitignore Example  
@@ -377,7 +377,7 @@ data/
 *.parquet
 ```
 
---
+---
 
 
 ### Summary  
