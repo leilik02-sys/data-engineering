@@ -386,7 +386,7 @@ data/
 
 ### Summary  
 > [!NOTE]
-The project delivers a full ETL + EDA workflow and meets the technical and structural requirements of the Data Engineering course (Lecture 8).  
+The project delivers a full ETL + EDA workflow.  
 
 - Automated data ingestion and cleaning  
 - PostgreSQL database integration  
