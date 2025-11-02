@@ -2,7 +2,7 @@
   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWtkc3M0ZDRuZXp6YmF3cG5vZGRmM2I3ajJ4ZWhlM3R4M2dnYXBoMyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o7TKsQWkP0h2fQbXK/giphy.gif" width="120" alt="ETL Globe Animation" />
 </p>
 
-<h1 align="center">🌍 ETL + EDA Data Pipeline Project</h1>  
+<h1 align="center"> ETL + EDA Data Pipeline Project</h1>  
 <p align="center">
   <em>A complete Extract–Transform–Load workflow with data analysis and PostgreSQL integration.</em>
 </p>
