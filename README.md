@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWtkc3M0ZDRuZXp6YmF3cG5vZGRmM2I3ajJ4ZWhlM3R4M2dnYXBoMyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o7TKsQWkP0h2fQbXK/giphy.gif" width="120" alt="ETL Globe Animation" />
+ <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2NyZ3Jsd2dkcHV2ZXFvOW9xZ3N0OGo0ZGRuc3NvM3c3and2ZDByYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0MYPsBLOYyFqSDte/giphy.gif" width="140" alt="Animated Data Globe" />
 </p>
 
 <h1 align="center"> ETL + EDA Data Pipeline Project</h1>  
@@ -135,7 +135,7 @@ pip install pandas gdown numpy pyarrow sqlalchemy psycopg2-binary jupyterlab mat
 
 ---
 
-## � ETL Pipeline
+## ETL Pipeline
 
 > [!IMPORTANT]
 > The ETL (Extract – Transform – Load) pipeline automates all stages of dataset processing:
